@@ -30,9 +30,36 @@ $(document).ready(function () {
         $('#mySidenav').removeClass('translate-x-0').addClass('translate-x-full');
     });
 });
+
 const toggleBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
 toggleBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
+const toggleBtn = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observers = document.querySelectorAll(".slide-up");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+        }
+    );
+
+    observers.forEach((el) => observer.observe(el));
+});
+
