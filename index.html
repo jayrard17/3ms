@@ -5,16 +5,26 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="R-wt7Xi5PXSS5BQQDVQq4fRh74UtsR-JVAHRy0N9rhw" />
   <title>3M'S Construction</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="index.js"></script>
+  <meta name="google-site-verification" content="R-wt7Xi5PXSS5BQQDVQq4fRh74UtsR-JVAHRy0N9rhw" />
+  <script defer src="index.js"></script>
   <style>
     /* Ensure sidenav transition is smooth */
     .sidenav {
       transition: transform 0.5s ease-in-out;
     }
+    .slide-up {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all 0.8s ease-out;
+      }
+
+      .slide-up.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
   </style>
 
 </head>
@@ -28,7 +38,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <img src="Logo.png" alt="3M'S Construction Logo" class="w-12 h-12 object-contain" />
+        <img src="img/Logo.png" alt="3M'S Construction Logo" class="w-12 h-12 object-contain" />
         <span class="text-base sm:text-sm sm:text-base md:text-lg md:text-xl font-bold text-gray-800">3M'S Construction</span>
       </div>
       <!-- Main Navigation (only visible on large screens) -->
@@ -55,9 +65,9 @@
   </div>
   <!--navbar end-->
 
-  <div id="home" class="home firstsection relative mx-auto">
+  <div id="home" class="slide-up home firstsection relative mx-auto">
     <!-- Background Image -->
-    <img src="bg.jpg" alt="Background" class="w-full h-[90vh] sm:h-[100vh] md:h-[110vh] object-cover">
+    <img src="img/bg.jpg" alt="Background" class="w-full h-[90vh] sm:h-[100vh] md:h-[110vh] object-cover">
   
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -90,7 +100,7 @@
   
   
 
-  <div class="diff-section flex flex-col pb-[15vh] pt-[5vh] bg-gray-100">
+  <div class="slide-up diff-section flex flex-col pb-[15vh] pt-[5vh] bg-gray-100">
     <div class="flex flex-col text-center justify-center items-center my-6 sm:my-8 md:my-10">
       <h3 class="text-[18px] text-base sm:text-sm sm:text-base md:text-lg md:text-xl mt-4 ml-4 text-gray-400 my-5">
         Find the Perfect Space That Suits Your Lifestyle and Vision
@@ -101,13 +111,13 @@
     </div>
     <div class="flex flex-col md:flex-row mx-5 gap-6">
       <div class="flex-1 flex flex-col items-center p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-100 rounded-lg">
-        <img src="apartment.png" alt="Apartment Icon" class="w-16 h-16 mb-4">
+        <img src="img/apartment.png" alt="Apartment Icon" class="w-16 h-16 mb-4">
         <h3 class="text-2xl sm:text-base md:text-lg font-semibold text-gray-800">Residential</h3>
         <p class="text-gray-500 text-center mt-2">Modern homes and apartments built with comfort, functionality, and style in mind.</p>
       </div>
       
       <div class="flex-1 flex flex-col items-center p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-100 rounded-lg">
-        <img src="commercial.png" alt="Commercial Icon" class="w-16 h-16 mb-4">
+        <img src="img/commercial.png" alt="Commercial Icon" class="w-16 h-16 mb-4">
         <h3 class="text-2xl sm:text-base md:text-lg font-semibold text-gray-800">Commercial</h3>
         <p class="text-gray-500 text-center mt-2">Custom-built commercial spaces designed to elevate your brand and support business growth.
 
@@ -115,7 +125,7 @@
       </div>
       
       <div class="flex-1 flex flex-col items-center p-6 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-100 rounded-lg">
-        <img src="villa.png" alt="Villa Icon" class="w-16 h-16 mb-4">
+        <img src="img/villa.png" alt="Villa Icon" class="w-16 h-16 mb-4">
         <h3 class="text-2xl sm:text-base md:text-lg font-semibold text-gray-800">Villa</h3>
         <p class="text-gray-500 text-center mt-2">Luxurious villas crafted with premium materials, elegant designs, and your personal touch.
 
@@ -124,13 +134,13 @@
     </div>
   </div>
 <section id="about">
-  <div class="aboutus-section" id="about">
+  <div class="slide-up aboutus-section" id="about">
     <div class="about-us-section py-20">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-center gap-10 px-4">
           <!-- Image Section -->
           <div class="w-full md:w-1/2">
-            <img src="h1.jpg" alt="About Us" class="shadow-xl w-full transition-transform duration-500">
+            <img src="img/h1.jpg" alt="About Us" class="shadow-xl w-full transition-transform duration-500">
           </div>
           
           <!-- Text Content -->
@@ -154,7 +164,7 @@
       </div>
     </div>
   <!-- We Are Experts Section -->
-  <div class="flex flex-col-reverse md:flex-row items-center justify-between px-5 py-20 gap-8 sm:gap-12 md:gap-20 mx-[6vw]">
+  <div class="slide-up flex flex-col-reverse md:flex-row items-center justify-between px-5 py-20 gap-8 sm:gap-12 md:gap-20 mx-[6vw]">
   
     <!-- Text Content -->
     <div class="w-full md:w-1/2 flex flex-col justify-center mx-auto">
@@ -176,14 +186,14 @@
     <!-- Image -->
     <div class="w-full md:w-[600px] h-[400px]">
       <div class="w-full h-full">
-        <img src="construc.png" alt="We Are Experts"
+        <img src="img/construc.png" alt="We Are Experts"
              class="w-full h-full object-cover transition-transform duration-500">
       </div>
     </div>
   
   </div>
   
-<section id="services" class="bg-gray-100">
+<section id="services" class="slide-up bg-gray-100">
   <div class="services-section py-20">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -193,31 +203,31 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <!-- Service 1 -->
         <div class="service-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-          <img src="web-design.png" alt="Design Services" class="w-20 h-20 mb-6 mx-auto">
+          <img src="img/web-design.png" alt="Design Services" class="w-20 h-20 mb-6 mx-auto">
           <h3 class="text-2xl sm:text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 text-center">Architectural Design</h3>
           <p class="text-gray-600 text-center mt-4">Creative and functional designs tailored to your needs.</p>
         </div>
         <!-- Service 2 -->
         <div class="service-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-          <img src="construction.png" alt="Construction Services" class="w-20 h-20 mb-6 mx-auto">
+          <img src="img/construction.png" alt="Construction Services" class="w-20 h-20 mb-6 mx-auto">
           <h3 class="text-2xl sm:text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 text-center">Construction</h3>
           <p class="text-gray-600 text-center mt-4">Reliable construction services for all types of projects.</p>
         </div>
         <!-- Service 3 -->
         <div class="service-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-          <img src="renovation.png" alt="Renovation Services" class="w-20 h-20 mb-6 mx-auto">
+          <img src="img/renovation.png" alt="Renovation Services" class="w-20 h-20 mb-6 mx-auto">
           <h3 class="text-2xl sm:text-base md:text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 text-center">Renovation</h3>
           <p class="text-gray-600 text-center mt-4">Expert renovation services to transform your space.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="about-us-section py-20">
+  <div class="slide-up about-us-section py-20">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-10 px-4">
         <!-- Image Section -->
         <div class="w-full md:w-1/2 pl-[10vw] pb-[5vh]">
-          <img src="improv.png" alt="About Us" class=" w-full transition-transform duration-500">
+          <img src="img\improv.png" alt="About Us" class=" w-full transition-transform duration-500">
         </div>
         
         <!-- Text Content -->
@@ -237,21 +247,21 @@
       </div>
     </div>
   </div>
-  <div class="px-6 py-20 mb-[15vh]">
+  <div class="slide-up px-6 py-20 mb-[15vh]">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Expertise</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- High-Rise Construction -->
         <div class="flex flex-col">
-          <img src="highrise.jpg" alt="High-Rise Construction" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
+          <img src="img/highrise.jpg" alt="High-Rise Construction" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
           <h3 class="text-base sm:text-sm sm:text-base md:text-lg md:text-xl font-semibold text-gray-800 mb-2">High-Rise Construction</h3>
           <p class="text-gray-600">
             Designing and implementing robust structural systems to ensure the stability and safety of tall buildings. Installing high-performance exterior facades that enhance the building's aesthetic appeal and energy efficiency. Integrating mechanical, electrical, and plumbing systems to create comfortable and efficient environments for occupants.        </div>
   
         <!-- Residential Roofing -->
         <div class="flex flex-col">
-          <img src="roofing.jpg" alt="Residential Roofing" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
+          <img src="img/roofing.jpg" alt="Residential Roofing" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
           <h3 class="text-base sm:text-sm sm:text-base md:text-lg md:text-xl font-semibold text-gray-800 mb-2">Residential Roofing</h3>
           <p class="text-gray-600">
             Installing various types of roofs, such as asphalt shingles, metal roofing, and tile roofing, with precision and care. Repairing leaks, replacing damaged shingles, and addressing other roofing issues to extend the lifespan of your roof. Helping homeowners choose the best roofing materials based on their budget, aesthetic preferences, and climate conditions.
@@ -260,7 +270,7 @@
   
         <!-- Architectural Design and Planning -->
         <div class="flex flex-col">
-          <img src="planning.jpg" alt="Architectural Design and Planning" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
+          <img src="img/planning.jpg" alt="Architectural Design and Planning" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
           <h3 class="text-base sm:text-sm sm:text-base md:text-lg md:text-xl font-semibold text-gray-800 mb-2">Architectural Design and Planning</h3>
           <p class="text-gray-600">
             Developing innovative and functional designs that meet clients' specific needs and vision. Creating detailed blueprints and construction documents to guide the building process. Utilizing advanced 3D modeling to visualize designs and identify potential issues before construction begins.
@@ -269,7 +279,7 @@
   
         <!-- Scaffolding and Safety -->
         <div class="flex flex-col">
-          <img src="safety.jpg" alt="Scaffolding and Safety" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
+          <img src="img/safety.jpg" alt="Scaffolding and Safety" class="rounded-lg shadow-lg mb-4 object-cover h-64 w-full">
           <h3 class="text-base sm:text-sm sm:text-base md:text-lg md:text-xl font-semibold text-gray-800 mb-2">Scaffolding and Safety</h3>
           <p class="text-gray-600">
             Erecting safe and reliable scaffolding systems for various construction and maintenance projects. Providing high-quality scaffolding equipment for rent, tailored to meet the specific needs of each project. Conducting thorough safety inspections of scaffolding to ensure compliance with regulations and prevent accidents.
@@ -279,9 +289,9 @@
     </div>
   </div>
 </section>
-  <section id="contact" class="flex flex-col md:flex-row items-center px-4 space-y-6 md:space-y-0 mb-[35vh] sm:mb-[15vh] md:mb-[10vh] lg:mb-[5vh]">
+  <section id="contact" class="slide-up flex flex-col md:flex-row items-center px-4 space-y-6 md:space-y-0 mb-[35vh] sm:mb-[15vh] md:mb-[10vh] lg:mb-[5vh]">
     <div class="w-full md:w-1/2">
-      <img src="contactus.png" alt="Contact Us" class="w-full h-full object-cover rounded-lg mb-6 md:mb-0" />
+      <img src="img\contactus.png" alt="Contact Us" class="w-full h-full object-cover rounded-lg mb-6 md:mb-0" />
     </div>
     <div class="w-full md:w-1/2 p-6">
       <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
