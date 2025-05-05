@@ -30,13 +30,6 @@ $(document).ready(function () {
         $('#mySidenav').removeClass('translate-x-0').addClass('translate-x-full');
     });
 });
-
-const toggleBtn = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
 const toggleBtn = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -62,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observers.forEach((el) => observer.observe(el));
 });
-
